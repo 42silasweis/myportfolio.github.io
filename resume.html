@@ -1,0 +1,255 @@
+<!doctype html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Resume</title>
+			<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+	<link href="silas_sp2.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+    </script>
+	<!-- START FANCYBOX -->
+	<!-- Add jQuery library -->
+	<script type="text/javascript" src="fancybox/lib/jquery-1.9.0.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="fancybox/jquery.fancybox.js?v=2.1.4"></script>
+	<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css?v=2.1.4" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+		});
+	</script>
+   <!-- END FANCYBOX -->
+	
+</head>
+	
+	
+
+<video autoplay muted loop id="myvideo"><source src="assets/float1.mp4" type="video/mp4"></video>
+
+<body onLoad="MM_preloadImages('assets/gif-buttons/home-down.gif','assets/gif-buttons/projects-down.gif','assets/gif-buttons/my-work-down.gif','assets/gif-buttons/videos-down.gif','assets/gif-buttons/resume-down.gif','assets/gif-buttons/contact-down.gif')">
+
+	
+	<div id="header-fixed"><table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td align="center"><a href="index.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('home','','assets/gif-buttons/home-down.gif',1)"><img src="assets/buttons/home-up.png" alt="" width="242" height="154" id="home"></a></td>
+      <td align="center"><a href="projects.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('projects','','assets/gif-buttons/projects-down.gif',1)"><img src="assets/buttons/projects-up.png" alt="" width="242" height="154" id="projects"></a></td>
+      <td align="center"><a href="work.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('my-work','','assets/gif-buttons/my-work-down.gif',1)"><img src="assets/buttons/my-work-up.png" alt="" width="242" height="154" id="my-work"></a></td>
+      <td align="center"><a href="videos.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('videos','','assets/gif-buttons/videos-down.gif',1)"><img src="assets/buttons/videos-up.png" alt="" width="242" height="154" id="videos"></a></td>
+      <td align="center"><a href="resume.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('resume','','assets/gif-buttons/resume-down.gif',1)"><img src="assets/buttons/resume-up.png" alt="" width="242" height="154" id="resume"></a></td>
+      <td align="center"><a href="contact.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('contact','','assets/gif-buttons/contact-down.gif',1)"><img src="assets/buttons/contact-up.png" alt="" width="242" height="154" id="contact"></a></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+
+<div class="logo">
+<img src="assets/banner.png" width="1920" height="1076" alt=""/></div>
+
+<div class="content">
+  
+  <p>  
+<table width="1519" border="0" align="center" cellpadding="3" cellspacing="3">
+  <tbody>
+    <tr>
+      <td colspan="7"><div title="Page 1">
+        <div>
+          <div>
+            <p class="mission">To inspire people around me, as I have been inspired. And to inspire people <br>
+              to make this world even better. This is my motto. everything else I do revolves </p>
+          </div>
+        </div>
+      </div></td>
+    </tr>
+    <tr align="center">
+      <td width="150" valign="bottom"><a class="fancybox-effects-c" href="assets/portfolio/big-cover-letter.jpg" title=""><img src="assets/portfolio/small-cover-letter.jpg" alt="" /></a></td>
+      <td width="150" valign="bottom"><a class="fancybox-effects-c" href="assets/portfolio/big-resume.jpg" title=""><img src="assets/portfolio/small-resume.jpg" alt="" /></a></td>
+      <td width="150" valign="bottom"><a class="fancybox-effects-c" href="assets/portfolio/big-job-app-1.jpg" title=""><img src="assets/portfolio/small-job-app-1.jpg" alt="" /></a></td>
+      <td width="207" align="center" valign="bottom"><a class="fancybox-effects-c" href="assets/portfolio/b1g-silas-hsbp-1.jpg" title=""><img src="assets/portfolio/small-silas-hsbp-1.jpg" alt="" /></a></td>
+      <td width="253" valign="bottom"><a class="fancybox-effects-c" href="assets/video work/awards/most-employable-big.png" title=""><img src="assets/video work/awards/most-employable-small.png" alt="" /></a></td>
+      <td width="248" valign="bottom"><a class="fancybox-effects-c" href="assets/video work/awards/perfect-attendance-big.png" title=""><img src="assets/video work/awards/perfect-attendance-small.png" alt="" /></a></td>
+      <td width="295" valign="bottom"><a class="fancybox-effects-c" href="assets/video work/awards/student-of-the-month-big.png" title=""><img src="assets/video work/awards/student-of-the-month-small.png" alt="" /></a></td>
+    </tr>
+    <tr align="center">
+      <td class="video_table_text">Cover Letter</td>
+      <td class="video_table_text">Resume</td>
+      <td class="video_table_text">Job Application</td>
+      <td class="video_table_text">High-School Beyond Plan</td>
+      <td class="video_table_text">My student of the month award</td>
+      <td valign="top" class="video_table_text">My Perfect Attendance Award</td>
+      <td class="video_table_text">My student of the month award</td>
+    </tr>
+    <tr align="center">
+      <td><a href="assets/portfolio/Silas's Cover letter.pdf" target="_blank">Print</a></td>
+      <td><a href="assets/portfolio/resume.pdf" target="_blank">Print</a></td>
+      <td><a href="assets/portfolio/job app.pdf" target="_blank">Print</a></td>
+      <td><a href="assets/portfolio/hsbp.pdf" target="_blank">Print</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>&nbsp;</p>
+<div class="footer"></div>
+</body>
+</html>
+

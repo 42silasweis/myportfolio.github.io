@@ -1,0 +1,56 @@
+@charset "UTF-8";
+body {
+    background-image: url(assets/3000px-background1.png);
+	margin: 0;
+	padding: 0;
+}
+#header-fixed {
+
+	width: 1140px;
+
+	float: none;
+
+	margin: 0px auto;
+
+	position: fixed;
+
+	top: 0px;
+
+	right: 0px;
+
+	left: 0px;
+
+	z-index: 100000;
+
+	}
+
+.header_div {
+    width: 1500px;
+    height: auto;
+    margin: 0px auto;
+}
+.wrapper {
+    width: 1500px;
+    margin: 0px auto;
+}
+.container {
+    width: 1500px;
+    background-position: 0;
+    background-size: auto auto;
+    background-repeat: no-repeat;
+}
+.content {
+    width: 1500px;
+    background-color: #94494B;
+    height: auto;
+    margin: 0px auto;
+}
+
+.button_up {
+    margin-top: 140px;
+}
+.clear {
+	clear: all;
+	float: left;
+	width: 100%;
+}

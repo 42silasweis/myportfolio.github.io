@@ -1,0 +1,176 @@
+@charset "UTF-8";
+body {
+    background-image: url(assets/float
+%20(1).gif);
+    margin: 0px;
+    padding: 0px;
+    background-color: #007EFA;
+}
+#header-fixed {
+
+	width: 1500px;
+
+	float: none;
+
+	margin: 0px auto;
+
+	position: fixed;
+
+	top: 0px;
+
+	right: 0px;
+
+	left: 0px;
+
+	z-index: 1000;
+
+	}
+
+.logo {
+    width: 1920px;
+    color: #fff;
+    font-size: 26px;
+    text-align: left;
+    margin: 0px auto;
+    height: 640px;
+	}
+
+#nav {
+
+	width: 1500px;
+
+	margin: 0px auto;
+
+	padding: 20px;
+
+	color: #fff;
+
+	text-align: left;
+
+	background:#000;
+
+	}
+
+#nav a {
+
+	color: #fff;
+
+	text-decoration: none;
+
+	}
+
+#nav a:hover {
+
+	color: #FFFA84;
+
+	}
+
+.content {
+    width: 1420px;
+    margin-top: 170px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0px;
+    padding: 40px;
+
+
+	}
+.into {
+    font-family: "Helvetica Bold", Helvetica, "Helvetica Light", "Helvetica Neue", "Helvetica Neue Bold";
+    font-weight: bolder;
+    font-style: normal;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.footer {
+    width: 1500px;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    color: #fff;
+    text-align: left;
+	clear: both;
+}
+#myvideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1000;
+    background-position: center 200px;
+    top: auto;
+}
+	
+	
+.content table {
+    margin-top: -190px;
+}
+.video {
+    padding-left: 208px;
+    padding-top: 100px;
+}
+.mission {
+    font-family: "Helvetica Bold", Helvetica, "Helvetica Light", "Helvetica Neue", "Helvetica Neue Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: x-large;
+    text-align: center;
+}
+.projects_table {
+    margin-top: 150px;
+    font-size: x-large;
+}
+.contact_white_text {
+    background-image: url(assets/750-web-bounding-box-2.png);
+    color: #FFFFFF;
+    font-family: "Helvetica Bold", Helvetica, "Helvetica Light", "Helvetica Neue", "Helvetica Neue Bold";
+    font-size: large;
+    background-position: center 0%;
+    background-repeat: no-repeat;
+}
+.submit_button {
+    padding-top: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    font-size: large;
+    border-radius: 8px;
+}
+.form_field {
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-color: #000000;
+    border-width: 1px;
+}
+
+textarea {
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.shadow {
+    -webkit-box-shadow: 0 8px 7px -2px;
+    box-shadow: 0 8px 7px -2px;
+}
+.videoshadows {
+    -webkit-box-shadow: 0px 8px 12px 0px #000000;
+    box-shadow: 0px 8px 12px 0px #000000;
+}
+.video_player_shadow {
+    -webkit-box-shadow: 0px 5px 13px -4px #000000;
+    box-shadow: 0px 5px 13px -4px #000000;
+}
+.video_table_text {
+    color: #000000;
+    font-size: large;
+    font-weight: bold;
+}
